@@ -1,0 +1,46 @@
+#topReasons_banner {
+	@extend %products_title;
+}
+
+.topreasons_area{
+	padding: 60px 0px;
+	margin-top: 70px;
+
+	.products_heading {
+		padding: 0px 0px 0px 20px;
+		margin-bottom: 20px;
+
+		h3{
+			font-size: 25px;
+			font-weight: 600;
+			font-style: italic;
+		}
+	}
+	
+  	.single_product{
+  		.product-item{
+	      	margin: 0px 20px 0px 20px;
+	      	background-color: #fff;
+	      	border: 2px solid $theme-color;
+	      	min-height: 430px;
+
+	      	@extend %slider_area_style;
+	    }
+  	}
+
+  	.topreasons_desc{
+  		.topreasons_block{
+  			h3{
+  				font-size: 18px;
+  				font-weight: 600;
+  				margin-bottom: 15px;
+
+  				i{
+  					font-size: 30px;
+  					margin-right: 10px;
+  					color: $theme-color;
+  				}
+  			}
+  		}
+  	}
+}

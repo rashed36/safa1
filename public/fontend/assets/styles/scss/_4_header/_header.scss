@@ -1,0 +1,334 @@
+ .header{
+    height: 70px;
+    //  background-image:linear-gradient(to bottom, #2265e0, #1e66c5);
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 3px 16px 0 rgba(0,0,0,.1);
+
+    /* === Logo === */
+    span.logo {
+       float: left;
+       line-height: 70px;
+       font-size: 26px;
+       font-weight: bold;
+
+       img {
+          max-width: 100px;
+          margin-top: -4px;
+       }
+    }
+ }
+
+ /* ==== main-menu ==== */
+ .menu {
+    margin: 0;
+    padding: 0;
+    float: right;
+    line-height: 65px;
+    z-index: 55555;
+
+    li {
+       list-style-type: none;
+       position: relative;
+       display: inline-block;
+       margin-left: 5px;
+
+       &:hover {
+
+          #pdf_menu {
+             opacity: 1;
+             visibility: visible;
+             top: 150%;
+          }
+       }
+
+       &:last-child {
+          margin-left: 15px;
+       }
+
+       a {
+          color: $black-color;
+          padding: 5px 10px;
+          display: block;
+          text-decoration: none;
+          font-size: 14px;
+          text-transform: capitalize;
+          letter-spacing: 0.05em;
+          -webkit-transition: .3s ease-in-out;
+
+          &::after {
+             position: absolute;
+             left: 11px;
+             bottom: 0;
+             content: '';
+             height: 2px;
+             background-color: #fff;
+             width: 0;
+             transition: .4s;
+          }
+
+          &:hover {
+             &::after {
+                width: 50%;
+             }
+          }
+       }
+    }
+
+ }
+
+ /* === arrow-icon === */
+ .sub-menu:before {
+    content: '\f107';
+    font-family: fontAwesome;
+    position: absolute;
+    color: $theme-color;
+    top: -11px;
+    right: -8px;
+ }
+
+ .menu li:hover .sub-menu:before {
+    content: '\f106';
+ }
+
+ /* ==== dropdown-menu ==== */
+ .menu {
+    li {
+       #pdf_menu {
+          position: absolute;
+          top: 110%;
+          left: 0;
+          opacity: 0;
+          visibility: hidden;
+          background-color: #fff;
+          -webkit-box-shadow: 14px 17px 13px -21px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 14px 17px 13px -21px rgba(0, 0, 0, 0.75);
+          box-shadow: 14px 17px 13px -21px rgba(0, 0, 0, 0.75);
+          width: 230px;
+          line-height: 0;
+          -webkit-transition: .3s ease-in-out;
+          z-index: 100;
+
+       }
+    }
+ }
+
+ .menu {
+    li {
+       &:hover>#pdf_menu {
+          display: block;
+       }
+    }
+ }
+
+
+ .menu {
+    li {
+
+       #pdf_menu{
+          li {
+             margin: 0;
+             display: block;
+          }
+       }
+    }
+ }
+
+ .menu li ul li:last-child {
+    margin-bottom: 0;
+ }
+
+ .menu {
+    li {
+
+       #pdf_menu {
+          li {
+             a {
+                color: $black-color;
+                padding: 15px 15px;
+                line-height: 1.3;
+                font-size: 14px;
+                text-transform: capitalize;
+
+                &::after {
+                   display: none;
+                }
+             }
+
+             &:hover>a {
+                color: $white-color;
+                background-color: $hover-color;
+             }
+          }
+       }
+    }
+ }
+
+ /* ==== Hide-show-icon ==== */
+ .show-menu-btn,
+ .hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+ }
+
+ .menu a:hover,
+ .show-menu-btn,
+ .hide-menu-btn {
+    color: $hover-color;
+ }
+
+ .show-menu-btn {
+    float: right;
+ }
+
+ .show-menu-btn i {
+    line-height: 70px;
+    color: $hover-color;
+    padding: 2px 5px;
+    display: inline;
+    border-radius: 5px;
+    font-size: 28px;
+ }
+
+ #chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+ }
+
+
+ @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu {
+       li {
+          .sub-menu:before {
+             top: -12px;
+             right: -10px;
+          }
+
+          a {
+             font-size: 14px;
+             padding: 5px 5px;
+          }
+
+       }
+    }
+ }
+
+ @media only screen and (max-width:767px) {
+
+    .show-menu-btn,
+    .hide-menu-btn {
+       display: block;
+    }
+
+    /* === menu-arrow-icon === */
+    .sub-menu:before {
+       top: 11px;
+       right: 40px;
+    }
+
+    /* === menu === */
+    .menu {
+       position: fixed;
+       width: 40%;
+       height: 100%;
+       background-color: rgba(51, 51, 51, .9);
+       color: $white-color;
+       text-align: left;
+       padding: 100px 10px;
+       line-height: normal;
+       transition: 0.7s;
+       right: -100%;
+       display: block;
+       z-index: 55555;
+       transform: translateY(-50%);
+       top: 50%;
+       overflow: scroll;
+
+       /* == menu-hide-icon == */
+       .hide-menu-btn {
+          position: absolute;
+          top: -70px !important;
+          left: 10px !important;
+          overflow: hidden;
+
+          i {
+             font-size: 18px;
+          }
+       }
+
+       li {
+          display: block;
+          margin-left: 0;
+          padding-left: 20px;
+             -webkit-transition: ease .5s;
+             -moz-transition: ease .5s;
+             -ms-transition: ease .5s;
+             transition: ease .5s;
+
+          &:hover>#pdf_menu {
+             position: relative;
+             left: 0;
+             top: 0 !important;
+             background-color: inherit;
+             width: 100%;
+             // padding-left: 25px !important;
+             -webkit-transition: ease .5s;
+             -moz-transition: ease .5s;
+             -ms-transition: ease .5s;
+             transition: ease .5s;
+             box-shadow: none;
+          }
+          &:last-child {
+            margin-left: 0px;
+         }
+          a {
+             color: $white-color;
+             font-size: 14px;
+
+             &::after {
+                display: none;
+             }
+
+             &:hover {
+                color: $theme-color;
+             }
+          }
+
+          #pdf_menu{
+             background-color: transparent;
+             -webkit-transition: none;
+
+             li {
+                a {
+                   padding: 10px 20px;
+                   color: white;
+
+                   &::after {
+                      display: none;
+                   }
+                }
+             }
+          }
+       }
+    }
+
+    #chk:checked~.menu {
+       right: 0;
+    }
+
+ }
+
+ @media screen and (max-width:480px) {
+    .menu {
+       width: 60%;
+       padding: 100px 15px;
+
+       .hide-menu-btn {
+          top: -70px !important;
+          left: 8px !important;
+       }
+    }
+ }

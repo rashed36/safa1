@@ -1,0 +1,236 @@
+.slider_area{
+  margin-top: 70px;
+
+  #carouselExampleCaptions{
+    background-color: #000;
+
+    .carousel-indicators{
+      bottom: 15px;
+    }
+
+    .carousel-inner{
+      .carousel-item{
+        height: 85vh;
+
+        img{
+          height: 100%;
+        }
+
+        .carousel-caption {
+          color: #000;
+          text-align: left;
+          top: 200px;
+
+          h2{
+            color: #111;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 40px;
+          }
+          p{
+            font-size: 25px;
+          }
+        }
+      }
+    }   
+
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      background-color: $theme-color;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      border-radius: 50%;
+    }
+    .carousel-control-next{
+      right: 50px;
+    }
+    .carousel-control-prev{
+      left: 50px;
+    }
+  }
+}
+
+.about_us_area{
+	padding: 60px 0px;
+
+	.about_title {
+        @extend %section_title;
+        margin-bottom: 60px;
+
+        @include max-width(767px) {
+          margin-bottom: 40px;
+          
+          h2{
+            font-size: 25px;
+          }
+        }
+
+        @include max-width(480px) {
+           margin-bottom: 30px;
+        }
+    }
+  
+  .about_image {
+    width: 100%;
+    height: 400px;
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+	.about_text{
+		padding: 20px;
+
+		.highlight{
+			color: $hover-color;
+			font-weight: 500;
+
+			
+		}
+		
+	}
+}
+
+#company_banner {
+      background-image: url('../../images/aboutbanner.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      .company_banner_wrap {
+         padding: 100px 0px;
+
+         @include max-width(767px) {
+            padding: 30px 0px;
+         }
+
+         .company_banner_content_box {
+            .icon {
+               float: left;
+               margin-top: 28px;
+
+               i {
+                  color: $theme-color;
+
+                  &::before {
+                     font-size: 60px;
+                  }
+               }
+            }
+
+            .description {
+               margin-left: 95px;
+
+               h3 {
+                  font-weight: 700;
+                  color: #fff;
+                  font-size: 30px;
+               }
+
+               span {
+                  color: $theme-color;
+                  font-weight: 600;
+               }
+            }
+
+            /* @maedia-responsive */
+            @include min-max(992px, 1199px) {
+
+               .description {
+                  margin-left: 95px;
+
+                  h3 {
+                     font-size: 32px;
+                  }
+
+                  span {
+                     font-size: 18px;
+                  }
+               }
+            }
+
+            // 768px-991px
+            @include min-max(768px, 991px) {
+               .description {
+                  margin-left: 95px;
+
+                  h3 {
+                     font-size: 32px;
+                  }
+
+                  span {
+                     font-size: 18px;
+                  }
+               }
+            }
+
+            // max-width: 767px
+            @include max-width(767px) {
+               .description {
+                  margin-left: 100px;
+
+                  h3 {
+                     font-size: 32px;
+                  }
+
+                  span {
+                     font-size: 13px;
+                  }
+               }
+            }
+
+            // max-width: 576px
+            @include max-width(576px) {
+               .description {
+                  text-align: center;
+                  margin-left: 0px;
+                  margin-top: 15px;
+
+                  h3 {
+                     font-size: 32px;
+                     margin: 12px 0px;
+                  }
+
+                  span {
+                     font-size: 16px;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+
+.products_area{
+	padding: 60px 0px;
+	background-color: #f4f4f4;
+
+	.product_title {
+    @extend %section_title;
+      margin-bottom: 60px;
+
+    @include max-width(767px) {
+      margin-bottom: 40px;
+    }
+
+    @include max-width(480px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .multi_product{
+    .product-item{
+      margin: 0px 20px 0px 20px;
+      background-color: #fff;
+      border: 2px solid $theme-color;
+      min-height: 430px;
+
+      @extend %slider_area_style;
+    }
+  }
+}

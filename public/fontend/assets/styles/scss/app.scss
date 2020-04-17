@@ -1,0 +1,112 @@
+/* import-all-css file */
+@import '_0_variavles/_variables';
+@import '_1_globals/_typography';
+@import '_3_mixins/_mixins';
+@import '_2_inherits/_extend.scss';
+@import '_4_header/_header';
+@import '_5_index/_index';
+@import '_6_pages/_profile';
+@import '_6_pages/_contact';
+@import '_6_pages/_paper_cones';
+@import '_6_pages/_briquette';
+@import '_6_pages/_origanic_cotton_fabric';
+@import '_6_pages/_top_reasons';
+@import '_7_footer/_footer';
+
+
+
+
+
+
+/* //* ========= Large-Device 1200px-1600px =========*/
+@media #{$large_device} {}
+
+/* //* ======= Medium-Device 992px-1199px ========== */
+@media #{$medium_device} {
+  .slider_area{
+    #carouselExampleCaptions{
+      .carousel-inner{
+        .carousel-item{
+            .carousel-caption{
+              h2{
+                font-size: 35px;
+              }
+
+              p{
+                font-size: 25px;
+              }
+            }
+          }
+      }
+    }
+  }
+
+  
+}
+
+/* //*========  Tab-Device 768px-991px ======== */
+@media #{$tab_device} {
+  .slider_area{
+    #carouselExampleCaptions{
+      .carousel-inner{
+        .carousel-item{
+            .carousel-caption{
+              h2{
+                font-size: 30px;
+              }
+
+              p{
+                font-size: 20px;
+              }
+            }
+          }
+      }
+    }
+  }
+
+}
+
+/* //* ======== large-mobile 480px-767px ======= */
+@media #{$large_mobile} {
+   	.slider_area{
+   		#carouselExampleCaptions{
+			 .carousel-inner{
+		      height: 65vh;
+
+          .carousel-item{
+            img{
+              min-height: 60vh;
+            }
+
+            .carousel-caption{
+              bottom: 60px;
+              h2{
+                font-size: 25px;
+              }
+
+              p{
+                font-size: 20px;
+              }
+            }
+          }
+		    }
+
+        .carousel-control-next,
+        .carousel-control-prev{
+          display: none;
+        }
+   		}
+   	}
+
+}
+
+/* //*======= Small-Mobile Max-767px  ========= */
+@media #{$small_mobile} {
+   
+}
+
+
+/* //* ====== max-width-480px ======= */
+@media #{$extra_small_mobile} {
+
+}

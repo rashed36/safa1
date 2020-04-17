@@ -1,0 +1,234 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
+
+body {
+  font-family: $Poppins;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #fff;
+  text-rendering: optimizeLegibility;
+  color: $body-color;
+  box-sizing: border-box;
+}
+
+.img {
+  max-width: 100%;
+  transition: all 0.3s ease-out 0s;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+a,
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+i,
+fab,
+fas,
+far {
+  font-family: FontAwesome;
+}
+
+a {
+  text-decoration: none !important;
+  line-height: 30px;
+  color: inherit;
+}
+
+a:focus,
+input:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: $body-color;
+}
+dl,
+ol,
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.btn:link,
+.btn:visited,
+.btn {
+  color:$white-color;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control:focus,
+button:focus,
+input:focus,
+input:focus,
+textarea,
+textarea:focus {
+  outline: none;
+  outline-color: none;
+  outline-style: none;
+  outline-width: 0;
+  box-shadow: none;
+}
+
+/* change border colour to suit your needs */
+hr {
+  border-bottom: 1px solid $theme-color;
+  border-top: 0 none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+label {
+  color: #7e7e7e;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $Open-sans;
+  color: $black-color;
+  font-weight: normal;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 28px;
+  margin-bottom: 15px;
+}
+
+*::-moz-selection {
+  background: #4dbf1c;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #4dbf1c;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #4dbf1c;
+  color: #fff;
+  text-shadow: none;
+}
+
+*::-moz-placeholder {
+  color: #4dbf1c;
+  font-size: 14px;
+  opacity: 1;
+}
+
+*::placeholder {
+  color: #4dbf1c;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.btn {
+  -moz-user-select: none;
+  border: medium none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 12px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transition: all 0.4s ease;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: $theme-color;
+  
+    &:hover{
+      color: $white-color;
+    }
+  }
+
+/* === Page-lode === */
+ div#preloader {
+  position: fixed;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 99999;
+   overflow: visible;
+   background: #fff url('../../images/icon/loading.gif') no-repeat center center;
+ }

@@ -1,0 +1,65 @@
+#products_banner {
+	@extend %products_title;
+}
+
+.briquette_area{
+	padding: 60px 0px;
+	margin-top: 70px;
+
+	h3 {
+		font-size: 20px;
+		margin-bottom: 20px;
+		font-weight: 600;
+	}
+
+	.product_overview{
+		margin-bottom: 30px;
+
+		.table{
+			border: 1px solid #000;
+			thead{
+				border: 1px solid #000;
+				th{
+					border: 1px solid #000;
+				}
+			}
+			tbody{
+				tr{
+					border: 1px solid #000;
+					td{
+						border: 1px solid #000;
+						padding: 10px 20px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	.industries_overview{
+		.table{
+			border: 1px solid #000;
+			thead{
+				border: 1px solid #000;
+				th{
+					border: 1px solid #000;
+				}
+			}
+			tbody{
+				tr{
+					border: 1px solid #000;
+					td{
+						border: 1px solid #000;
+						padding: 10px 20px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+
+	.single_product{
+		@extend %single_product_slider_style;
+  	}
+}

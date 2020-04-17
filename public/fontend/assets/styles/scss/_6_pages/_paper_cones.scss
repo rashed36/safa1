@@ -1,0 +1,92 @@
+#products_banner {
+	@extend %products_title;
+}
+
+.product_desc_area{
+	margin-top: 70px;
+	padding: 60px 0px;
+
+	.product_desc,
+	.specification,
+	.applications,
+	.product_overview,
+	.advantages,
+	.faq_design{ 
+		h3 {
+			font-size: 20px;
+			margin-bottom: 20px;
+			font-weight: 600;
+		}
+
+		.feature_area{
+			h4{
+				font-size: 20px;
+				margin-bottom: 20px;
+				font-weight: 600;
+			}
+
+			ul{
+				padding: 0px 0px 0px 30px;
+				margin-bottom: 25px;
+
+				li{
+					margin-bottom: 10px;
+				}
+			}
+		}
+		
+		.advantages_ul{
+			@extend %advantages_ul_style;
+		}
+
+		.faq_section{
+			@extend %faq_section_style;
+		}
+
+	}
+
+	.specification{
+		table{
+			margin-bottom: 30px;
+			border: 1px solid #000;
+			tbody{
+				tr{
+					border: 1px solid #000;
+					td{
+						border: 1px solid #000;
+						padding: 10px 20px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	.product_overview{
+		width: 100%;
+
+		.table{
+			border: 1px solid #000;
+			thead{
+				border: 1px solid #000;
+				th{
+					border: 1px solid #000;
+				}
+			}
+			tbody{
+				tr{
+					border: 1px solid #000;
+					td{
+						border: 1px solid #000;
+						padding: 10px 20px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+
+	.single_product{
+		@extend %single_product_slider_style;
+  	}
+}

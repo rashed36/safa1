@@ -1,0 +1,50 @@
+#profile_banner {
+	@extend %products_title;
+}
+
+.profile_area{
+	padding: 60px 0px;
+	margin-top: 70px;
+
+  	.profile_style_area{
+		.profile_image_area {
+			background-color: $white-color;
+			padding: 3px;
+			border: 2px solid $theme-color;
+			border-radius: 5px;
+			width: 100%;
+			height: 500px;
+
+			img{
+				border-radius: 5px;
+				height: 100%;
+			}
+		}
+
+		.profile_description{
+			padding: 20px;
+		}
+  	}
+
+  	.products_heading {
+		padding: 0px 0px 0px 20px;
+		margin-bottom: 20px;
+
+		h3{
+			font-size: 25px;
+			font-weight: 600;
+			font-style: italic;
+		}
+	}
+
+  	.single_product{
+  		.product-item{
+	      	margin: 0px 20px 0px 20px;
+	      	background-color: #fff;
+	      	border: 2px solid $theme-color;
+	      	min-height: 430px;
+
+	      	@extend %slider_area_style;
+	    }
+  	}
+}

@@ -1,0 +1,31 @@
+/* Type Of All Project Variable  */
+
+
+/*font-family*/
+$Open-sans: 'Open Sans',
+sans-serif;
+$Poppins: 'Poppins',
+sans-serif;
+
+
+$theme-color: #4dbf1c ;
+
+// hover-color
+$hover-color: #4dbf1c;
+
+/* Variable-For-Color */
+$body-bg-color: #e7e7e7;
+$body-color: #000;
+
+$black-color: #000;
+$white-color: #fff;
+
+
+
+/* Variables-As-Full-Query */
+$large_device: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$medium_device: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$tab_device: 'only screen and (min-width: 768px) and (max-width: 991px)';
+$small_mobile: 'only screen and (max-width: 767px)';
+$large_mobile: 'only screen and (min-width: 480px) and (max-width: 767px)';
+$extra_small_mobile: 'only screen and (max-width: 480px)';

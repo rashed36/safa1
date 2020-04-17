@@ -1,0 +1,20 @@
+// *\76543   max-width-query
+@mixin max-width ($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+// min-width-query
+@mixin min-width ($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+// max-min-query
+@mixin min-max ($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
